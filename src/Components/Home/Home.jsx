@@ -19,6 +19,9 @@ const Home = () => {
   const [user, setuser] = useState("");
   const [isUserValid, setIsUserValid] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [search,setSearch] = useState("");
+
+  console.log("searching for:",search);
 
   const returnUserProfile = () => {
     if (
@@ -73,6 +76,8 @@ const Home = () => {
         setIsSidebarOpen={setIsSidebarOpen}
         user={user}
         setuser={setuser}
+        setSearch={setSearch}
+        search={search}
       />
       <LoginModal
         openModal={openModal}
@@ -81,7 +86,7 @@ const Home = () => {
         isUserValid={isUserValid}
       />
       <Routes>
-        <Route path="/" element={<JobBoard user={user} isLoggedIn={isLoggedIn}/>} />
+        <Route path="/" element={<JobBoard user={user} isLoggedIn={isLoggedIn} search={search}/>} />
         <Route path="/applied-job" element={<AppliedJobs user={user} isLoggedIn={isLoggedIn} />} />
         <Route path="/post-job" element={<PostJob user={user} isLoggedIn={isLoggedIn} />} />
         <Route path="/approve-job" element={<ApproveJob user={user} isLoggedIn={isLoggedIn}/>} />

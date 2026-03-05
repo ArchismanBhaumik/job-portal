@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import user_icon from '../../assets/user.svg'
 
-const Navbar = ({setOpenModal,isLoggedIn,setisLoggedIn,setIsSidebarOpen,user,setuser}) => {
+const Navbar = ({setOpenModal,isLoggedIn,setisLoggedIn,setIsSidebarOpen,user,setuser,setSearch,search}) => {
   const openModalFn=()=>{
     setOpenModal((prev)=>!prev)
   }
@@ -14,10 +14,14 @@ const Navbar = ({setOpenModal,isLoggedIn,setisLoggedIn,setIsSidebarOpen,user,set
     setuser('');
   } 
 
+  const handleChange=(e)=>{
+    setSearch(e.target.value);
+  }
+
   return (
     <nav>
      <div> <FontAwesomeIcon icon={faBars} onClick={()=>{setIsSidebarOpen(true)}}/></div>
-      <input type="text" placeholder="search jobs"/>
+      <input type="text" placeholder="search jobs" value={search} onChange={handleChange}/>
       <div className="user-div">
         <button className={isLoggedIn?'d-none':''} onClick={()=>openModalFn()}>Login</button>
         <button className={isLoggedIn?'':'d-none'} onClick={()=>logOut()}>Logout</button>
