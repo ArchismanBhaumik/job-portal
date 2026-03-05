@@ -1,0 +1,68 @@
+.job-wrapper{
+    height: 200px;
+    width: 70%;
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.job-title{
+    font-size: 30px;
+    font-weight: 600;
+    background: teal;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    border-bottom: 1px solid snow;
+    height: 35%;
+}
+.job-body{
+    background-color: #7AB2B2 ; 
+    height: 65%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+.job-body .experience{
+    color: snow;
+    border-right: 1px solid snow;
+    padding: 10px;
+    margin-right: 10px;
+
+}
+
+.job-body .skill{
+    padding: 5px;
+    height:30px;
+    width: 100%;
+    background-color: black;
+    color: snow;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job-details{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.apply-btn{
+    margin-inline: 30px;
+    position: absolute;
+    height: 30px;
+    width: 70px;
+    right: 0;
+    border-radius: 10px;
+    border: 1px solid #C40C0C;
+    background-color: #FFD45A;
+    color: #C40C0C;
+    outline: 0;
+}

@@ -1,0 +1,37 @@
+nav{
+    padding: 10px;
+    background: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+nav input{
+ height: 30px;
+ width: 50%;
+ border-radius: 5px;
+ padding: 10px;
+}
+
+.user-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.user-div button{
+    width: 60px;
+    height: 40px;
+    background: snow;
+    border-radius: 10px;
+}
+.user-div button:hover{
+    border: 1px solid snow;
+    background-color: cornflowerblue;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
