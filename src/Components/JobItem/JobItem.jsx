@@ -19,19 +19,41 @@ const JobItem = ({ job, user, isLoggedIn }) => {
   );
 };
 
-const approveJob = () =>{
-setUnApprovedJobs((prev) =>
-  prev.filter((item) => item.jobId !== job.jobId)
-);
-  setJobs((prevJobs)=>[
-    ...prevJobs,
-    {...job,approved:!job.approved}
-  ])
+// const approveJob = () =>{
+// setUnApprovedJobs((prev) =>
+//   prev.filter((item) => item.jobId !== job.jobId)
+// );
+//   setJobs((prevJobs)=>[
+//     ...prevJobs,
+//     {...job,approved:!job.approved}
+//   ])
+//   navigate('/');
+// console.log("unapproved jobs after approving:",unApprovedJobs);
+// }
+
+const approveJob = () => {
+
+  if(job.approved){
+    setJobs(prev => prev.filter(item => item.jobId !== job.jobId));
+
+    setUnApprovedJobs(prev => [
+      ...prev,
+      {...job, approved:false}
+    ]);
+
+  } else {
+    setUnApprovedJobs(prev =>
+      prev.filter(item => item.jobId !== job.jobId)
+    );
+
+    setJobs(prev => [
+      ...prev,
+      {...job, approved:true}
+    ]);
+  }
+
   navigate('/');
-console.log("unapproved jobs after approving:",unApprovedJobs);
-}
-
-
+};
   return (
     <div className="job-wrapper">
       <div className="job-title">{job.title}</div>
