@@ -63,7 +63,7 @@ const LoginModal = ({ openModal, setOpenModal, setLoginInfo, isUserValid }) => {
             <button type="submit">Login</button>
           </div>
         </form>
-        <div className={showError ? "" : "d-none"}>
+        <div className={showError ? "error" : "d-none"}>
           <span className="invalid-user">User is invalid!</span>
         </div>
       </div>

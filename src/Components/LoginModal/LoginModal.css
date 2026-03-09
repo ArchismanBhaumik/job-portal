@@ -56,3 +56,6 @@
 .invalid-user{
     color: red;
 }
+.error{
+    text-align: center;
+}
