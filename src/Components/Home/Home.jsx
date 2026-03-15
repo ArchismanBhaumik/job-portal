@@ -86,7 +86,7 @@ const Home = () => {
         isUserValid={isUserValid}
       />
       <Routes>
-        <Route path="/" element={<JobBoard user={user} isLoggedIn={isLoggedIn} search={search}/>} />
+        <Route path="/" element={<JobBoard user={user} isLoggedIn={isLoggedIn} search={search} setSearch={setSearch}/>} />
         <Route path="/applied-job" element={<AppliedJobs user={user} isLoggedIn={isLoggedIn} />} />
         <Route path="/post-job" element={<PostJob user={user} isLoggedIn={isLoggedIn} />} />
         <Route path="/approve-job" element={<ApproveJob user={user} isLoggedIn={isLoggedIn}/>} />

@@ -21,7 +21,8 @@ const Navbar = ({setOpenModal,isLoggedIn,setisLoggedIn,setIsSidebarOpen,user,set
   return (
     <nav>
      <div> <FontAwesomeIcon icon={faBars} onClick={()=>{setIsSidebarOpen(true)}}/></div>
-      <input type="text" placeholder="search jobs" value={search} onChange={handleChange}/>
+      {/* <input type="text" placeholder="search jobs" value={search} onChange={handleChange}/> */}
+      <h1>Find Next Job</h1>
       <div className="user-div">
         <button className={isLoggedIn?'d-none':''} onClick={()=>openModalFn()}>Login</button>
         <button className={isLoggedIn?'':'d-none'} onClick={()=>logOut()}>Logout</button>
