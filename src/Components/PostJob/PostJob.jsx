@@ -63,6 +63,7 @@ const PostJob = () => {
         min:0,
         max:0
       },
+      
       skills: "",
       jobType:"IT"
     });
