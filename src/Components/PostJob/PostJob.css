@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 100%;
 }
-.form-wrapper input{
+.form-wrapper input[type="text"],input[type="number"]{
     margin-top: 10px ;
     width: 50%;
     height: 40px;
@@ -19,4 +19,24 @@
     color: snow;
     border: 1px solid snow;
     border-radius: 10px;
+}
+.radio-btns{
+    display: flex;
+}
+.radio-btns label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 300px; /* ⭐ SAME WIDTH FOR BOTH */
+  background: #f8f8f8;
+}
+.radio-btns label:hover {
+  background: #eee;
+}
+.radio-btns input {
+  transform: scale(1.1);
+  cursor: pointer;
 }

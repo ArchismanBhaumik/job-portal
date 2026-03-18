@@ -23,3 +23,12 @@
 .search-box image {
     width: 15px;
 }
+.jobs-filter{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.jobs{
+  width: 80%;
+  padding-right: 200px;
+}

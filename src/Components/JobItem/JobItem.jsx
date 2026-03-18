@@ -37,7 +37,7 @@ const JobItem = ({ job, user, isLoggedIn }) => {
 
       <div className="job-content">
         <p className="experience">
-          <strong>Experience:</strong> {job.experience}
+          <strong>Experience:</strong> {job.experience.min} -  {job.experience.max} Years
         </p>
 
         <div className="skills-box">

@@ -1,0 +1,96 @@
+.filter {
+  padding: 20px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 300px;
+}
+
+/* LABELS */
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* SLIDER */
+.slider-container {
+  position: relative;
+  height: 40px;
+}
+
+.slider-track {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.slider-range {
+  position: absolute;
+  height: 6px;
+  background: #4f46e5;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.thumb {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  background: none;
+  height: 40px;
+  -webkit-appearance: none;
+}
+
+/* Actual circle thumb */
+.thumb::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 18px;
+  height: 18px;
+  background: #4f46e5;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/* RADIO BUTTONS */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio input {
+  transform: scale(1.2);
+}
+
+/* APPLY BUTTON */
+.filter-footer {
+  margin-top: auto;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 10px;
+  background: #4f46e5;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
